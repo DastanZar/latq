@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "latq"
+version = "0.1.0"
+description = "D8-lattice vector quantization: 8 weights per byte, codebook-resident decode GEMV"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.0", "numpy"]
+license = "MIT"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+bench = ["matplotlib", "triton>=3.0; platform_system=='Linux'"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["latq"]
+
+[tool.ruff]
+line-length = 100

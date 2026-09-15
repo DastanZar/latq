@@ -1,0 +1,29 @@
+{
+  "mode": "triton-interpreter",
+  "fidelity_ladder": {
+    "d8": {
+      "bits_per_weight": 1,
+      "rel_err": 0.6072,
+      "rd_floor_at_bpw": 0.6028,
+      "compression_vs_fp16": 15.8
+    },
+    "d4": {
+      "bits_per_weight": 2,
+      "rel_err": 0.3355,
+      "rd_floor_at_bpw": 0.3133,
+      "compression_vs_fp16": 7.9
+    },
+    "z2": {
+      "bits_per_weight": 4,
+      "rel_err": 0.1037,
+      "rd_floor_at_bpw": 0.0783,
+      "compression_vs_fp16": 4.0
+    }
+  },
+  "kernel_parity_max_abs_err": {
+    "d8": "9.54e-07",
+    "d4": "8.94e-07",
+    "z2": "1.43e-06"
+  },
+  "d8_floor_claim": "D8 rel-err lands within 5% of the 1-bit Gaussian R-D floor sqrt(1-2/pi)"
+}
